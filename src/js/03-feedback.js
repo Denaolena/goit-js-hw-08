@@ -7,6 +7,7 @@ const formData = {};
 const refs = {
   form: document.querySelector('.feedback-form'),
   //   email: document.querySelector('input'),
+
   textarea: document.querySelector('textarea'),
 };
 refs.form.addEventListener('submit', onFormSubmit);
@@ -45,5 +46,6 @@ function populateTextarea() {
   if (savedMessage) {
     console.log(savedMessage);
     refs.textarea.value = savedMessage;
+    refs.form.value = savedMessage;
   }
 }
