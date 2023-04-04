@@ -44,7 +44,7 @@ function onInput(evt) {
 }
 
 function populateTextarea() {
-  const savedMessage = JSON.parse(localStorage.getItem(STORAGE_KEY));
+  const savedMessage = localStorage.getItem(STORAGE_KEY);
   if (savedMessage) {
     console.log(savedMessage);
     refs.textarea.value = savedMessage.message;
